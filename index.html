@@ -36,7 +36,7 @@
                 
             </div>
   
-    
+    <p id="canIPlay"></p>
        
     </div>
      </div>
@@ -50,7 +50,29 @@
  <audio src="hide.mp3" id="hide" loop ></audio>
     
     <script>
+window.onload = function() {
 
+
+const todaysDate = new Date();
+ const todaysMonth = todaysDate.getMonth() + 1;
+ const todaysDay = todaysDate.getDate();
+ const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+ const todaysWeekday = weekdays[todaysDate.getDay()];
+
+ 
+ const canIPlay = document.getElementById("canIPlay");
+if (todaysWeekday === "Sunday" | todaysWeekday === "Monday" | todaysWeekday === "Tuesday") {
+canIPlay.textContent = "I can not play VR today :(";
+canIPlay.style.color = "Red";
+} else if {
+canIPlay.textContent = "I can  play VR today :)";
+canIPlay.style.color = "Green";
+} else if {
+}
+ 
+};
+
+        
 const audioPlayer = document.getElementById("secretMusicPlayer");
 const hide = document.getElementById("hide");
 const addBtn = document.getElementById("addBtn")
