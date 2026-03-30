@@ -51,7 +51,7 @@
  <audio src="hide.mp3" id="hide" loop ></audio>
     
     <script>
-window.onload = function() {
+ function ifICanPlay() {
 
 
 const todaysDate = new Date();
@@ -68,7 +68,8 @@ canIPlay.style.color = "Red";
 } else {
 canIPlay.textContent = "I can  play VR today :)";
 canIPlay.style.color = "Green";
-};
+}
+ }
 
         
 const audioPlayer = document.getElementById("secretMusicPlayer");
